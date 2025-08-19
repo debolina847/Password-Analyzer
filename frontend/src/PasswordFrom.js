@@ -13,9 +13,9 @@ function PasswordForm({ setResult }) {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/api/analyze-password',
-        { password }
-      );
+        'http://localhost:5000/analyze',
+        { password });
+      console.log("Backend strength value:",data);
       setResult(data);
     } catch (error) {
       console.error('Error analyzing password:', error);

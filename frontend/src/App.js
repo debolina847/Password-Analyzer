@@ -18,7 +18,7 @@ return (
 <PasswordForm setResult={setResult} />
 {result && (
 <>
-<PasswordStrengthBar strength={getStrengthText(result.score)} />
+<PasswordStrengthBar strength={getStrengthText(result.strength)} />
 <p style={{ marginTop: '8px', fontWeight: 'bold' }}>
 Estimated Time to Crack: <span style={{ color: '#555' }}>{result.timeToCrack}</span>
 </p>

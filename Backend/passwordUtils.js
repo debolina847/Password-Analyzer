@@ -96,7 +96,9 @@ const analyzePassword = (pwd) => {
   const entropy = (password.length * Math.log2(charsetSize)).toFixed(2);
 
   return {
-    strength,
+    score,
+    strength: score,
+    
     weaknesses,
     recommendations: recommendations.length ? recommendations : ["Good job! Your password looks strong."],
     timeToCrack,
@@ -105,4 +107,4 @@ const analyzePassword = (pwd) => {
 };
 
 // ✅ Correct export (no duplicate, correct function name)
-module.exports = { analyzePassword, estimateCrackTime };     //for further us
+module.exports = { analyzePassword, estimateCrackTime };     
